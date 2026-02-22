@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum Calculator</title>
+    </head>
+    <body>
+        <h2>Sum Calculator</h2>
+        <form method="post">
+            {%csrf_token %}
+            <input type = "number" name="a" required>
+            <input type = "number" name="b" required>
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if result is not None %}
+            <p><strong>Result:</strong> {{result}}</p>
+        {% endif %}
+    </body>
+</html>
